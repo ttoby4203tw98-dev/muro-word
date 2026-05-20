@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>MURO 暮若 — 字體規範</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Noto+Serif+TC:wght@200;300;400;500;600;700&family=Noto+Sans+TC:wght@100;200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  
+  :root {
+    --c-misty-white: #F5F1EA;
+    --c-oat: #E8DFD0;
+    --c-milk-tea: #D4C4AC;
+    --c-dusk-gray: #9B9081;
+    --c-deep-brown: #6B5640;
+    --c-ink-green: #4A5247;
+    --c-dusk-purple: #6B5B73;
+    --c-candle-gold: #C9A876;
+    --c-near-black: #1A1A1A;
+  }
+  
+  html, body {
+    background: var(--c-misty-white);
+    color: var(--c-near-black);
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+  }
+  
+  .page {
+    width: 1240px;
+    margin: 0 auto;
+    padding: 80px 70px;
+    background: var(--c-misty-white);
+    position: relative;
+  }
+  
+  /* 頁首 */
+  header {
+    border-bottom: 0.5px solid var(--c-dusk-gray);
+    padding-bottom: 50px;
+    margin-bottom: 70px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: end;
+  }
+  
+  .brand-eyebrow {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 11px;
+    letter-spacing: 0.45em;
+    color: var(--c-dusk-gray);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+  
+  .brand-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 64px;
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    color: var(--c-near-black);
+    line-height: 1;
+  }
+  
+  .brand-sub {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 18px;
+    color: var(--c-deep-brown);
+    margin-top: 16px;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+  }
+  
+  .doc-meta {
+    text-align: right;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--c-dusk-gray);
+    font-size: 13px;
+    letter-spacing: 0.1em;
+  }
+  
+  .doc-meta .title {
+    font-style: normal;
+    font-size: 14px;
+    letter-spacing: 0.3em;
+    color: var(--c-near-black);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+  
+  /* 章節標題 */
+  .section-label {
+    display: flex;
+    align-items: baseline;
+    gap: 24px;
+    margin-bottom: 36px;
+  }
+  
+  .section-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px;
+    color: var(--c-candle-gold);
+    letter-spacing: 0.3em;
+    font-style: italic;
+  }
+  
+  .section-title {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 26px;
+    font-weight: 400;
+    color: var(--c-near-black);
+    letter-spacing: 0.15em;
+  }
+  
+  .section-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--c-dusk-gray);
+    letter-spacing: 0.1em;
+  }
+  
+  .section-line {
+    flex: 1;
+    height: 0.5px;
+    background: var(--c-dusk-gray);
+    opacity: 0.4;
+    margin-bottom: 8px;
+  }
+  
+  /* 紙質感 */
+  .page::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+      radial-gradient(circle at 25% 30%, rgba(212, 196, 172, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 75% 70%, rgba(155, 144, 129, 0.04) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  .page > * { position: relative; z-index: 1; }
+  
+  /* ============================================ */
+  /* 字體家族展示 - 中文                          */
+  /* ============================================ */
+  .font-family-block {
+    margin-bottom: 80px;
+  }
+  
+  .font-meta-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    padding: 0 8px;
+  }
+  
+  .font-purpose {
+    font-family: 'Noto Serif TC', serif;
+    color: var(--c-deep-brown);
+    font-size: 15px;
+    letter-spacing: 0.05em;
+  }
+  
+  .font-tag {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--c-candle-gold);
+    letter-spacing: 0.2em;
+  }
+  
+  .font-showcase {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  
+  .font-card {
+    background: var(--c-misty-white);
+    border: 0.5px solid var(--c-dusk-gray);
+    border-radius: 2px;
+    padding: 36px 36px 32px;
+    position: relative;
+  }
+  
+  .font-card-label {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 12px;
+    letter-spacing: 0.25em;
+    color: var(--c-dusk-gray);
+    text-transform: uppercase;
+  }
+  
+  .font-card-name {
+    font-size: 13px;
+    letter-spacing: 0.25em;
+    color: var(--c-candle-gold);
+    margin-bottom: 8px;
+    font-family: 'Cormorant Garamond', serif;
+    text-transform: uppercase;
+  }
+  
+  .font-card-cn {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 18px;
+    color: var(--c-deep-brown);
+    margin-bottom: 28px;
+    letter-spacing: 0.1em;
+  }
+  
+  .font-sample-large {
+    font-size: 42px;
+    line-height: 1.4;
+    letter-spacing: 0.1em;
+    color: var(--c-near-black);
+    margin-bottom: 8px;
+  }
+  
+  .font-sample-medium {
+    font-size: 18px;
+    line-height: 1.6;
+    letter-spacing: 0.08em;
+    color: var(--c-near-black);
+    margin-bottom: 20px;
+    opacity: 0.85;
+  }
+  
+  .font-sample-small {
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--c-near-black);
+    opacity: 0.7;
+    margin-bottom: 22px;
+    letter-spacing: 0.05em;
+  }
+  
+  .font-weights {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    padding-top: 18px;
+    border-top: 0.5px solid var(--c-dusk-gray);
+    border-color: rgba(155, 144, 129, 0.3);
+  }
+  
+  .font-weight-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  
+  .font-weight-sample {
+    font-size: 22px;
+    color: var(--c-near-black);
+  }
+  
+  .font-weight-meta {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--c-dusk-gray);
+    text-transform: uppercase;
+  }
+  
+  /* 中文字體用樣式 */
+  .ff-serif-tc { font-family: 'Noto Serif TC', serif; }
+  .ff-sans-tc { font-family: 'Noto Sans TC', sans-serif; }
+  
+  /* 英文字體用樣式 */
+  .ff-cormorant { font-family: 'Cormorant Garamond', serif; }
+  .ff-inter { font-family: 'Inter', sans-serif; }
+  .ff-playfair { font-family: 'Playfair Display', serif; }
+  
+  /* ============================================ */
+  /* 字級階層                                     */
+  /* ============================================ */
+  .scale-table {
+    background: var(--c-misty-white);
+    border: 0.5px solid var(--c-dusk-gray);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  
+  .scale-row {
+    display: grid;
+    grid-template-columns: 120px 1fr 280px;
+    align-items: center;
+    padding: 28px 36px;
+    border-bottom: 0.5px solid rgba(155, 144, 129, 0.25);
+  }
+  
+  .scale-row:last-child { border-bottom: none; }
+  
+  .scale-level {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .scale-tag {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--c-candle-gold);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+  
+  .scale-name {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 15px;
+    color: var(--c-near-black);
+    letter-spacing: 0.1em;
+  }
+  
+  .scale-preview {
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 300;
+    color: var(--c-near-black);
+    letter-spacing: 0.08em;
+    line-height: 1.4;
+  }
+  
+  .scale-meta {
+    text-align: right;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px;
+    color: var(--c-dusk-gray);
+    letter-spacing: 0.1em;
+    line-height: 1.6;
+  }
+  
+  .scale-meta strong {
+    color: var(--c-deep-brown);
+    font-weight: 400;
+  }
+  
+  /* ============================================ */
+  /* 互動式 Playground                            */
+  /* ============================================ */
+  .playground-section {
+    margin-top: 90px;
+    padding-top: 70px;
+    border-top: 0.5px solid var(--c-dusk-gray);
+  }
+  
+  .playground {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 50px;
+    margin-top: 36px;
+    align-items: start;
+  }
+  
+  /* 控制面板 */
+  .control-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .control-group {
+    background: var(--c-misty-white);
+    border: 0.5px solid var(--c-dusk-gray);
+    border-radius: 2px;
+    padding: 22px 24px;
+  }
+  
+  .control-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    color: var(--c-candle-gold);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    display: block;
+  }
+  
+  .control-title-cn {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 14px;
+    color: var(--c-near-black);
+    letter-spacing: 0.15em;
+    margin-bottom: 14px;
+  }
+  
+  .control-options {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .control-option {
+    background: transparent;
+    border: 0.5px solid rgba(155, 144, 129, 0.4);
+    padding: 12px 16px;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'Noto Serif TC', serif;
+    font-size: 14px;
+    color: var(--c-near-black);
+    letter-spacing: 0.08em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .control-option:hover {
+    border-color: var(--c-deep-brown);
+    background: rgba(232, 223, 208, 0.3);
+  }
+  
+  .control-option.active {
+    border-color: var(--c-candle-gold);
+    background: var(--c-oat);
+    border-width: 1px;
+  }
+  
+  .control-option .option-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 12px;
+    color: var(--c-dusk-gray);
+    letter-spacing: 0.1em;
+  }
+  
+  /* 滑桿 */
+  .slider-control {
+    margin-top: 4px;
+  }
+  
+  .slider-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  
+  .slider-input {
+    flex: 1;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 2px;
+    background: var(--c-dusk-gray);
+    outline: none;
+    border-radius: 2px;
+  }
+  
+  .slider-input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background: var(--c-candle-gold);
+    border-radius: 50%;
+    cursor: pointer;
+    border: 0.5px solid var(--c-deep-brown);
+  }
+  
+  .slider-input::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: var(--c-candle-gold);
+    border-radius: 50%;
+    cursor: pointer;
+    border: 0.5px solid var(--c-deep-brown);
+  }
+  
+  .slider-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    color: var(--c-deep-brown);
+    min-width: 50px;
+    text-align: right;
+    letter-spacing: 0.05em;
+  }
+  
+  /* 預覽區 */
+  .preview-area {
+    background: var(--c-misty-white);
+    border: 0.5px solid var(--c-dusk-gray);
+    border-radius: 2px;
+    padding: 60px 50px;
+    min-height: 480px;
+    position: sticky;
+    top: 20px;
+  }
+  
+  .preview-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 36px;
+    padding-bottom: 16px;
+    border-bottom: 0.5px solid rgba(155, 144, 129, 0.3);
+  }
+  
+  .preview-meta-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    color: var(--c-candle-gold);
+    text-transform: uppercase;
+  }
+  
+  .preview-meta-info {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px;
+    color: var(--c-dusk-gray);
+    letter-spacing: 0.05em;
+  }
+  
+  .preview-text {
+    color: var(--c-near-black);
+    transition: font-family 0.3s, font-size 0.3s, font-weight 0.3s, letter-spacing 0.3s, line-height 0.3s;
+    word-break: break-word;
+  }
+  
+  .preview-input-area {
+    margin-top: 36px;
+    padding-top: 24px;
+    border-top: 0.5px solid rgba(155, 144, 129, 0.3);
+  }
+  
+  .preview-input-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    color: var(--c-candle-gold);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  
+  .preview-input {
+    width: 100%;
+    background: transparent;
+    border: 0.5px solid rgba(155, 144, 129, 0.4);
+    padding: 12px 16px;
+    font-family: 'Noto Serif TC', serif;
+    font-size: 14px;
+    color: var(--c-near-black);
+    letter-spacing: 0.05em;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  
+  .preview-input:focus {
+    border-color: var(--c-candle-gold);
+  }
+  
+  /* ============================================ */
+  /* 搭配範例                                     */
+  /* ============================================ */
+  .combo-section {
+    margin-top: 90px;
+    padding-top: 70px;
+    border-top: 0.5px solid var(--c-dusk-gray);
+  }
+  
+  .combo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 36px;
+  }
+  
+  .combo-card {
+    background: var(--c-misty-white);
+    border: 0.5px solid var(--c-dusk-gray);
+    padding: 50px 44px;
+    aspect-ratio: 5 / 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .combo-card-tag {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    color: var(--c-candle-gold);
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+  
+  .combo-eyebrow {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 12px;
+    letter-spacing: 0.4em;
+    color: var(--c-dusk-gray);
+    margin-bottom: 14px;
+    text-transform: uppercase;
+  }
+  
+  .combo-headline {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 36px;
+    font-weight: 300;
+    letter-spacing: 0.12em;
+    line-height: 1.45;
+    color: var(--c-near-black);
+    margin-bottom: 18px;
+  }
+  
+  .combo-body {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--c-near-black);
+    opacity: 0.85;
+    letter-spacing: 0.05em;
+  }
+  
+  .combo-meta {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 12px;
+    color: var(--c-dusk-gray);
+    letter-spacing: 0.1em;
+    padding-top: 16px;
+    border-top: 0.5px solid rgba(155, 144, 129, 0.3);
+    margin-top: 18px;
+  }
+  
+  /* ============================================ */
+  /* DO / DON'T                                   */
+  /* ============================================ */
+  .rules-section {
+    margin-top: 90px;
+    padding-top: 70px;
+    border-top: 0.5px solid var(--c-dusk-gray);
+  }
+  
+  .rules-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin-top: 36px;
+  }
+  
+  .rule-col {
+    padding: 30px 32px;
+    border-radius: 2px;
+  }
+  
+  .rule-yes {
+    background: var(--c-oat);
+  }
+  
+  .rule-no {
+    background: var(--c-misty-white);
+    border: 0.5px solid var(--c-near-black);
+  }
+  
+  .rule-head {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    letter-spacing: 0.3em;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+  }
+  
+  .rule-yes .rule-head { color: var(--c-deep-brown); }
+  .rule-no .rule-head { color: var(--c-near-black); }
+  
+  .rule-list { list-style: none; padding: 0; }
+  
+  .rule-list li {
+    padding: 9px 0;
+    font-family: 'Noto Serif TC', serif;
+    font-size: 14px;
+    color: var(--c-near-black);
+    line-height: 1.7;
+    letter-spacing: 0.05em;
+    border-bottom: 0.5px solid rgba(0,0,0,0.08);
+  }
+  
+  .rule-list li:last-child { border-bottom: none; }
+  
+  .rule-list li::before {
+    content: '—';
+    margin-right: 12px;
+    color: var(--c-candle-gold);
+    font-family: 'Cormorant Garamond', serif;
+  }
+  
+  /* ============================================ */
+  /* 頁尾                                         */
+  /* ============================================ */
+  footer {
+    margin-top: 90px;
+    padding-top: 40px;
+    border-top: 0.5px solid var(--c-dusk-gray);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  
+  .footer-quote {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 17px;
+    color: var(--c-deep-brown);
+    font-weight: 400;
+    letter-spacing: 0.15em;
+  }
+  
+  .footer-meta {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--c-dusk-gray);
+    font-size: 12px;
+    letter-spacing: 0.15em;
+  }
+  
+  /* 響應式 */
+  @media (max-width: 1100px) {
+    .playground { grid-template-columns: 1fr; }
+    .preview-area { position: static; }
+    .font-showcase { grid-template-columns: 1fr; }
+    .combo-grid { grid-template-columns: 1fr; }
+    .scale-row { grid-template-columns: 100px 1fr; }
+    .scale-meta { grid-column: 2; text-align: left; margin-top: 8px; }
+  }
+  
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- 頁首 -->
+  <header>
+    <div>
+      <div class="brand-eyebrow">Typography System · 2026</div>
+      <h1 class="brand-name">MURO 暮若</h1>
+      <div class="brand-sub">字體規範 · Typography Guide</div>
+    </div>
+    <div class="doc-meta">
+      <div class="title">Typography</div>
+      <div>For Design Team Use</div>
+      <div>Revision 01 · 2026.05</div>
+    </div>
+  </header>
+
+  <!-- ============================================ -->
+  <!-- 01 · 字體家族 - 中文 -->
+  <!-- ============================================ -->
+  <div class="section-label">
+    <span class="section-num">01</span>
+    <span class="section-title">中文字體</span>
+    <span class="section-en">Chinese Typefaces</span>
+    <span class="section-line"></span>
+  </div>
+  
+  <div class="font-family-block">
+    <div class="font-meta-row">
+      <div class="font-purpose">暮若的中文字體分為「襯線（標題）」與「無襯線（內文）」兩家族。</div>
+      <div class="font-tag">— Two Families —</div>
+    </div>
+    
+    <div class="font-showcase">
+      
+      <!-- 思源宋體 -->
+      <div class="font-card">
+        <div class="font-card-label">Heading</div>
+        <div class="font-card-name">Noto Serif TC</div>
+        <div class="font-card-cn">思源宋體 · 標題用</div>
+        <div class="font-sample-large ff-serif-tc">暮色降臨</div>
+        <div class="font-sample-medium ff-serif-tc">為懂自己的妳精選每一件</div>
+        <div class="font-sample-small ff-serif-tc">用於海報主標、商品名稱、品牌語句等重要文字。襯線體帶有書卷氣與講究感,呼應 Quiet Luxury 的調性。</div>
+        <div class="font-weights">
+          <div class="font-weight-item">
+            <div class="font-weight-sample ff-serif-tc" style="font-weight:200;">暮若</div>
+            <div class="font-weight-meta">200 · Extra Light</div>
+          </div>
+          <div class="font-weight-item">
+            <div class="font-weight-sample ff-serif-tc" style="font-weight:300;">暮若</div>
+            <div class="font-weight-meta">300 · Light</div>
+          </div>
+          <div class="font-weight-item">
+            <div class="font-weight-sample ff-serif-tc" style="font-weight:400;">暮若</div>
+            <div class="font-weight-meta">400 · Regular</div>
+          </div>
+          <div class="font-weight-item">
+            <div class="font-weight-sample ff-serif-tc" style="font-weight:500;">暮若</div>
+            <div class="font-weight-meta">500 · Medium</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 思源黑體 -->
+      <div class="font-card">
+        <div class="font-card-label">Body</div>
+        <div class="font-card-name">Noto Sans TC</div>
+        <div class="font-card-cn">思源黑體 · 內文用</div>
+        <div class="font-sample-large ff-sans-tc" style="font-weight:300;">暮色降臨</div>
+        <div class="font-sample-medium ff-sans-tc" style="font-weight:300;">為懂自己的妳精選每一件</div>
+        <div class="font-sample-small ff-sans-tc" style="font-weight:300;">用於商品描述、規格說明、客服文案等內文場景。無襯線體乾淨易讀,務必使用 Light(300) 或更細的字重。</div>
+        <div class="font-weights">
+          <div class="font-weight-item">
+            <div class="font-weight-sample ff-sans-tc" style="font-weight:100;">暮若</div>
+            <div class="font-weight-meta">100 · Thin</div>
+          </div>
+          <div class="font-weight-item">
+            <div class="font-weight-sample ff-sans-tc" style="font-weight:200;">暮若</div>
+            <div class="font-weight-meta">200 · Extra Light</div>
+          </div>
+          <div class="font-weight-item">
+            <div class="font-weight-sample ff-sans-tc" style="font-weight:300;">暮若</div>
+            <div class="font-weight-meta">300 · Light</div>
+          </div>
+          <div class="font-weight-item">
+            <div class="font-weight-sample ff-sans-tc" style="font-weight:400;">暮若</div>
+            <div class="font-weight-meta">400 · Regular</div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- 02 · 字體家族 - 英文 -->
+  <!-- ============================================ -->
+  <div class="section-label">
+    <span class="section-num">02</span>
+    <span class="section-title">英文字體</span>
+    <span class="section-en">English Typefaces</span>
+    <span class="section-line"></span>
+  </div>
+  
+  <div class="font-family-block">
+    <div class="font-meta-row">
+      <div class="font-purpose">英文字體用於品牌名、標籤、英語標語、副資訊。</div>
+      <div class="font-tag">— Two Families —</div>
+    </div>
+    
+    <div class="font-showcase">
+      
+      <!-- Cormorant Garamond -->
+      <div class="font-card">
+        <div class="font-card-label">Display</div>
+        <div class="font-card-name">Cormorant Garamond</div>
+        <div class="font-card-cn">標題與品牌名用</div>
+        <div class="font-sample-large ff-cormorant">MURO</div>
+        <div class="font-sample-medium ff-cormorant" style="font-style:italic;">— Quiet, but lasting —</div>
+        <div class="font-sample-small ff-cormorant">Used for brand name, slogans, English headlines and editorial captions. Pair with Italic style for decorative quotes.</div>
+        <div class="font-weights">
+          <div class="font-weight-item">
+            <div class="font-weight-sample ff-cormorant" style="font-weight:300;">Muro</div>
+            <div class="font-weight-meta">300 · Light</div>
+          </div>
+          <div class="font-weight-item">
+            <div class="font-weight-sample ff-cormorant" style="font-weight:400;">Muro</div>
+            <div class="font-weight-meta">400 · Regular</div>
+          </div>
+          <div class="font-weight-item">
+            <div class="font-weight-sample ff-cormorant" style="font-weight:500;">Muro</div>
+            <div class="font-weight-meta">500 · Medium</div>
+          </div>
+          <div class="font-weight-item">
+            <div class="font-weight-sample ff-cormorant" style="font-weight:400;font-style:italic;">Muro</div>
+            <div class="font-weight-meta">400 · Italic</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Inter -->
+      <div class="font-card">
+        <div class="font-card-label">Body</div>
+        <div class="font-card-name">Inter</div>
+        <div class="font-card-cn">英文內文與資料用</div>
+        <div class="font-sample-large ff-inter" style="font-weight:300;">MURO</div>
+        <div class="font-sample-medium ff-inter" style="font-weight:300;">For everyday quietness.</div>
+        <div class="font-sample-small ff-inter" style="font-weight:300;">Used for product specs, English body text, prices, dates and other functional information. Keep weight Light (300) for refinement.</div>
+        <div class="font-weights">
+          <div class="font-weight-item">
+            <div class="font-weight-sample ff-inter" style="font-weight:200;">Muro</div>
+            <div class="font-weight-meta">200 · Extra Light</div>
+          </div>
+          <div class="font-weight-item">
+            <div class="font-weight-sample ff-inter" style="font-weight:300;">Muro</div>
+            <div class="font-weight-meta">300 · Light</div>
+          </div>
+          <div class="font-weight-item">
+            <div class="font-weight-sample ff-inter" style="font-weight:400;">Muro</div>
+            <div class="font-weight-meta">400 · Regular</div>
+          </div>
+          <div class="font-weight-item">
+            <div class="font-weight-sample ff-inter" style="font-weight:500;">Muro</div>
+            <div class="font-weight-meta">500 · Medium</div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- 03 · 字級階層 -->
+  <!-- ============================================ -->
+  <div class="section-label">
+    <span class="section-num">03</span>
+    <span class="section-title">字級階層</span>
+    <span class="section-en">Type Scale</span>
+    <span class="section-line"></span>
+  </div>
+  
+  <p style="font-family: 'Noto Serif TC', serif; font-size: 14px; color: var(--c-deep-brown); margin-bottom: 32px; letter-spacing: 0.08em; padding-left: 8px;">
+    ✦ 美工製作主圖、詳情頁時,字級請參照下方階層,保持視覺一致
+  </p>
+  
+  <div class="scale-table">
+    
+    <div class="scale-row">
+      <div class="scale-level">
+        <div class="scale-tag">H1</div>
+        <div class="scale-name">大標</div>
+      </div>
+      <div class="scale-preview" style="font-size:42px; line-height:1.4;">暮色降臨</div>
+      <div class="scale-meta">
+        <strong>42 / 48 px</strong><br>
+        Noto Serif TC · 300<br>
+        letter-spacing: 0.12em
+      </div>
+    </div>
+    
+    <div class="scale-row">
+      <div class="scale-level">
+        <div class="scale-tag">H2</div>
+        <div class="scale-name">中標</div>
+      </div>
+      <div class="scale-preview" style="font-size:26px; line-height:1.5;">為懂自己的妳</div>
+      <div class="scale-meta">
+        <strong>26 / 28 px</strong><br>
+        Noto Serif TC · 400<br>
+        letter-spacing: 0.1em
+      </div>
+    </div>
+    
+    <div class="scale-row">
+      <div class="scale-level">
+        <div class="scale-tag">H3</div>
+        <div class="scale-name">小標</div>
+      </div>
+      <div class="scale-preview" style="font-size:18px; line-height:1.6;">商品介紹 · 內衣選品</div>
+      <div class="scale-meta">
+        <strong>16 / 18 px</strong><br>
+        Noto Serif TC · 400<br>
+        letter-spacing: 0.1em
+      </div>
+    </div>
+    
+    <div class="scale-row">
+      <div class="scale-level">
+        <div class="scale-tag">BODY</div>
+        <div class="scale-name">內文</div>
+      </div>
+      <div class="scale-preview ff-sans-tc" style="font-size:14px; line-height:1.8; font-weight:300; letter-spacing:0.05em;">為日常忙碌的妳,挑選包覆剛好、舒服自在的每一件單品。</div>
+      <div class="scale-meta">
+        <strong>14 / 15 px</strong><br>
+        Noto Sans TC · 300<br>
+        line-height: 1.7-1.8
+      </div>
+    </div>
+    
+    <div class="scale-row">
+      <div class="scale-level">
+        <div class="scale-tag">CAPTION</div>
+        <div class="scale-name">註解</div>
+      </div>
+      <div class="scale-preview ff-sans-tc" style="font-size:12px; line-height:1.5; font-weight:300; color:var(--c-dusk-gray); letter-spacing:0.05em;">圖片僅供參考 · 實際以收到商品為準</div>
+      <div class="scale-meta">
+        <strong>11 / 12 px</strong><br>
+        Noto Sans TC · 300<br>
+        opacity: 0.7
+      </div>
+    </div>
+    
+    <div class="scale-row">
+      <div class="scale-level">
+        <div class="scale-tag">LABEL</div>
+        <div class="scale-name">英文標籤</div>
+      </div>
+      <div class="scale-preview ff-cormorant" style="font-size:13px; letter-spacing:0.3em; font-style:italic; color:var(--c-candle-gold); text-transform:uppercase;">New Arrival · 2026 SS</div>
+      <div class="scale-meta">
+        <strong>11 / 13 px</strong><br>
+        Cormorant Italic<br>
+        letter-spacing: 0.3em
+      </div>
+    </div>
+    
+  </div>
+
+  <!-- ============================================ -->
+  <!-- 04 · 互動式 Playground -->
+  <!-- ============================================ -->
+  <div class="playground-section">
+    <div class="section-label">
+      <span class="section-num">04</span>
+      <span class="section-title">字體試玩</span>
+      <span class="section-en">Typography Playground</span>
+      <span class="section-line"></span>
+    </div>
+    
+    <p style="font-family: 'Noto Serif TC', serif; font-size: 14px; color: var(--c-deep-brown); margin-bottom: 32px; letter-spacing: 0.08em; padding-left: 8px;">
+      ✦ 選字體、調字級、改字重 — 即時看效果。可輸入自己的文字測試
+    </p>
+    
+    <div class="playground">
+      
+      <!-- 控制面板 -->
+      <div class="control-panel">
+        
+        <div class="control-group">
+          <div class="control-label">Choose Font · 選字體</div>
+          <div class="control-options" id="font-options">
+            <button class="control-option active" data-font="'Noto Serif TC', serif" data-display="思源宋體">
+              <span>思源宋體</span>
+              <span class="option-en">Noto Serif TC</span>
+            </button>
+            <button class="control-option" data-font="'Noto Sans TC', sans-serif" data-display="思源黑體">
+              <span>思源黑體</span>
+              <span class="option-en">Noto Sans TC</span>
+            </button>
+            <button class="control-option" data-font="'Cormorant Garamond', serif" data-display="Cormorant">
+              <span>Cormorant</span>
+              <span class="option-en">English Display</span>
+            </button>
+            <button class="control-option" data-font="'Inter', sans-serif" data-display="Inter">
+              <span>Inter</span>
+              <span class="option-en">English Body</span>
+            </button>
+          </div>
+        </div>
+        
+        <div class="control-group">
+          <div class="control-label">Weight · 字重</div>
+          <div class="control-options" id="weight-options">
+            <button class="control-option" data-weight="200">
+              <span>Extra Light</span>
+              <span class="option-en">200</span>
+            </button>
+            <button class="control-option active" data-weight="300">
+              <span>Light</span>
+              <span class="option-en">300</span>
+            </button>
+            <button class="control-option" data-weight="400">
+              <span>Regular</span>
+              <span class="option-en">400</span>
+            </button>
+            <button class="control-option" data-weight="500">
+              <span>Medium</span>
+              <span class="option-en">500</span>
+            </button>
+          </div>
+        </div>
+        
+        <div class="control-group">
+          <div class="control-label">Size · 字級</div>
+          <div class="slider-control">
+            <div class="slider-row">
+              <input type="range" min="12" max="80" value="42" class="slider-input" id="size-slider">
+              <span class="slider-value" id="size-value">42 px</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="control-group">
+          <div class="control-label">Letter Spacing · 字距</div>
+          <div class="slider-control">
+            <div class="slider-row">
+              <input type="range" min="0" max="50" value="12" class="slider-input" id="spacing-slider">
+              <span class="slider-value" id="spacing-value">0.12 em</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="control-group">
+          <div class="control-label">Line Height · 行距</div>
+          <div class="slider-control">
+            <div class="slider-row">
+              <input type="range" min="100" max="220" value="145" class="slider-input" id="lineheight-slider">
+              <span class="slider-value" id="lineheight-value">1.45</span>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      
+      <!-- 預覽區 -->
+      <div class="preview-area">
+        <div class="preview-meta">
+          <div class="preview-meta-label">Live Preview</div>
+          <div class="preview-meta-info" id="preview-info">思源宋體 · 300 · 42px</div>
+        </div>
+        
+        <div class="preview-text" id="preview-text">暮色降臨,心若安然。<br>為懂自己的妳,從內到外。</div>
+        
+        <div class="preview-input-area">
+          <div class="preview-input-label">Try your own text · 試試自己的文字</div>
+          <input type="text" class="preview-input" id="text-input" value="暮色降臨,心若安然。為懂自己的妳,從內到外。" placeholder="輸入文字測試...">
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- 05 · 中英搭配範例 -->
+  <!-- ============================================ -->
+  <div class="combo-section">
+    <div class="section-label">
+      <span class="section-num">05</span>
+      <span class="section-title">中英搭配</span>
+      <span class="section-en">CN × EN Pairing</span>
+      <span class="section-line"></span>
+    </div>
+    
+    <p style="font-family: 'Noto Serif TC', serif; font-size: 14px; color: var(--c-deep-brown); margin-bottom: 32px; letter-spacing: 0.08em; padding-left: 8px;">
+      ✦ 中英文一起出現時的搭配範例 — 主圖、海報、社群常用
+    </p>
+    
+    <div class="combo-grid">
+      
+      <!-- 範例 A:標準款 -->
+      <div class="combo-card">
+        <div>
+          <div class="combo-card-tag">Combo · 01</div>
+          <div class="combo-eyebrow ff-cormorant">— MURO · NEW ARRIVAL —</div>
+          <div class="combo-headline ff-serif-tc">給懂自己的妳<br>從內到外,剛剛好</div>
+          <div class="combo-body">為日常忙碌的妳,挑選包覆剛好、舒服自在的每一件單品。</div>
+        </div>
+        <div class="combo-meta">Cormorant Italic + Noto Serif TC + Noto Sans TC</div>
+      </div>
+      
+      <!-- 範例 B:橫式 banner -->
+      <div class="combo-card">
+        <div>
+          <div class="combo-card-tag">Combo · 02</div>
+          <div style="font-family:'Cormorant Garamond',serif; font-size:48px; font-weight:300; color:var(--c-near-black); letter-spacing:0.08em; margin-bottom:8px;">MURO</div>
+          <div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:16px; color:var(--c-candle-gold); letter-spacing:0.25em; margin-bottom:24px;">— Quiet, but lasting —</div>
+          <div class="combo-headline ff-serif-tc" style="font-size:24px;">暮若 · 2026 春夏選品</div>
+        </div>
+        <div class="combo-meta">Cormorant 大標 + 中文副標</div>
+      </div>
+      
+      <!-- 範例 C:商品介紹 -->
+      <div class="combo-card">
+        <div>
+          <div class="combo-card-tag">Combo · 03</div>
+          <div style="font-family:'Cormorant Garamond',serif; font-size:11px; letter-spacing:0.4em; color:var(--c-dusk-gray); text-transform:uppercase; margin-bottom:12px;">NO. 01 · UNDERWEAR</div>
+          <div class="combo-headline ff-serif-tc" style="font-size:28px;">無痕包覆內衣</div>
+          <div class="combo-body" style="margin-bottom:14px;">95% 莫代爾 · 5% 彈性纖維<br>無鋼圈設計 · 適合 75A - 85B</div>
+        </div>
+        <div style="display:flex; justify-content:space-between; align-items:baseline; padding-top:18px; border-top:0.5px solid rgba(155, 144, 129, 0.3);">
+          <span style="font-family:'Cormorant Garamond',serif; font-size:24px; color:var(--c-deep-brown); letter-spacing:0.05em;">NT$ 880</span>
+          <span style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:12px; color:var(--c-candle-gold); letter-spacing:0.2em;">— Best Seller —</span>
+        </div>
+      </div>
+      
+      <!-- 範例 D:語句型 -->
+      <div class="combo-card" style="background:var(--c-oat); border:none;">
+        <div>
+          <div class="combo-card-tag" style="color:var(--c-deep-brown);">Combo · 04</div>
+          <div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:20px; color:var(--c-deep-brown); letter-spacing:0.05em; margin-bottom:18px; line-height:1.5;">"For the women<br>who know themselves."</div>
+          <div class="combo-headline ff-serif-tc" style="font-size:24px;">為懂自己的妳而生</div>
+        </div>
+        <div class="combo-meta">Cormorant Italic 引言 + 中文呼應</div>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- 06 · DO / DON'T -->
+  <!-- ============================================ -->
+  <div class="rules-section">
+    <div class="section-label">
+      <span class="section-num">06</span>
+      <span class="section-title">使用規則</span>
+      <span class="section-en">Guidelines</span>
+      <span class="section-line"></span>
+    </div>
+    
+    <div class="rules-grid">
+      
+      <div class="rule-col rule-yes">
+        <div class="rule-head">✓ Always · 該做</div>
+        <ul class="rule-list">
+          <li>標題用思源宋體(襯線),內文用思源黑體(無襯線)</li>
+          <li>內文字重一律 Light(300) 或更細</li>
+          <li>標題字距(letter-spacing) 0.08 - 0.15 em</li>
+          <li>行距(line-height) 1.6 - 1.8 之間</li>
+          <li>英文標籤用 Cormorant Italic + 大字距</li>
+          <li>中英文混排時,中文為主、英文為輔</li>
+        </ul>
+      </div>
+      
+      <div class="rule-col rule-no">
+        <div class="rule-head">✗ Never · 不該做</div>
+        <ul class="rule-list">
+          <li>標題用粗體 Bold (700+) 或極粗 Black</li>
+          <li>用可愛體、POP 體、書法體、毛筆體</li>
+          <li>用斜體+粗體+陰影+描邊組合</li>
+          <li>字距 0 或負值(字會擠在一起)</li>
+          <li>同一張主圖用超過 3 種字體</li>
+          <li>螢光色、紅色、桃紅色的文字</li>
+        </ul>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- 頁尾 -->
+  <footer>
+    <div class="footer-quote">— 不喧嘩,但耐看 · 不浮誇,但講究 —</div>
+    <div class="footer-meta">MURO 暮若 · Typography v1.0 · 2026</div>
+  </footer>
+
+</div>
+
+<script>
+(function() {
+  const state = {
+    font: "'Noto Serif TC', serif",
+    fontName: "思源宋體",
+    weight: 300,
+    size: 42,
+    spacing: 0.12,
+    lineHeight: 1.45
+  };
+  
+  const previewText = document.getElementById('preview-text');
+  const previewInfo = document.getElementById('preview-info');
+  const textInput = document.getElementById('text-input');
+  const sizeSlider = document.getElementById('size-slider');
+  const sizeValue = document.getElementById('size-value');
+  const spacingSlider = document.getElementById('spacing-slider');
+  const spacingValue = document.getElementById('spacing-value');
+  const lineheightSlider = document.getElementById('lineheight-slider');
+  const lineheightValue = document.getElementById('lineheight-value');
+  
+  function apply() {
+    previewText.style.fontFamily = state.font;
+    previewText.style.fontWeight = state.weight;
+    previewText.style.fontSize = state.size + 'px';
+    previewText.style.letterSpacing = state.spacing + 'em';
+    previewText.style.lineHeight = state.lineHeight;
+    
+    previewInfo.textContent = state.fontName + ' · ' + state.weight + ' · ' + state.size + 'px';
+  }
+  
+  // 字體選擇
+  document.querySelectorAll('#font-options .control-option').forEach(btn => {
+    btn.addEventListener('click', function() {
+      state.font = this.dataset.font;
+      state.fontName = this.dataset.display;
+      document.querySelectorAll('#font-options .control-option').forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      apply();
+    });
+  });
+  
+  // 字重
+  document.querySelectorAll('#weight-options .control-option').forEach(btn => {
+    btn.addEventListener('click', function() {
+      state.weight = parseInt(this.dataset.weight);
+      document.querySelectorAll('#weight-options .control-option').forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      apply();
+    });
+  });
+  
+  // 字級
+  sizeSlider.addEventListener('input', function() {
+    state.size = parseInt(this.value);
+    sizeValue.textContent = state.size + ' px';
+    apply();
+  });
+  
+  // 字距
+  spacingSlider.addEventListener('input', function() {
+    state.spacing = parseInt(this.value) / 100;
+    spacingValue.textContent = state.spacing.toFixed(2) + ' em';
+    apply();
+  });
+  
+  // 行距
+  lineheightSlider.addEventListener('input', function() {
+    state.lineHeight = parseInt(this.value) / 100;
+    lineheightValue.textContent = state.lineHeight.toFixed(2);
+    apply();
+  });
+  
+  // 文字輸入
+  textInput.addEventListener('input', function() {
+    const text = this.value || '暮色降臨,心若安然。';
+    previewText.innerHTML = text.replace(/\n/g, '<br>');
+  });
+  
+  apply();
+})();
+</script>
+
+</body>
+</html>
